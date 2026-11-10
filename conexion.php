@@ -1,9 +1,8 @@
 <?php
-	$mysqli = new mysqli('localhost', 'root', 'IJ010910', 'personal');
+	$mysqli = new mysqli("localhost", "root", "IJ010910", "personal"); 
 	
-	if($mysqli->connect_error){
-		
-		die('Error en la conexion' . $mysqli->connect_error);	
+	if(mysqli_connect_errno()){
+		echo 'Conexion Fallida : ', mysqli_connect_error();
+		exit();
 	}
-
 ?>
